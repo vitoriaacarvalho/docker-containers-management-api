@@ -1,6 +1,5 @@
 package com.vits.containers_management.config;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,9 +10,6 @@ import com.github.dockerjava.httpclient5.ApacheDockerHttpClient;
 
 @Configuration
 public class DockerClientConfig {
-
-	@Value("${docker.socket.path}")
-	private String dockerSocketPath;
 	
 	@Bean
 	public DockerClient buildDockerClient() {
